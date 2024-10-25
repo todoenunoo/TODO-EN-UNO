@@ -285,3 +285,26 @@ footer a {
 footer a:hover {
     text-decoration: underline; /* Subraya al pasar el mouse */
 }
+
+.product-card.out-of-stock {
+    background-color: #d3d3d3; /* Cambia el fondo a gris */
+    position: relative;
+    pointer-events: none; /* Desactiva interacciones */
+    opacity: 0.8; /* Atenúa el producto */
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.product-card.out-of-stock::before {
+    content: "SIN STOCK";
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgba(220, 20, 60, 0.9); /* Fondo rojo oscuro */
+    padding: 5px 20px;
+    position: absolute;
+    top: 50%; /* Ajusta la posición vertical */
+    left: -25%; /* Ajusta la posición horizontal */
+    transform: rotate(-45deg); /* Franja en diagonal */
+    width: 150%; /* Limita el ancho de la franja */
+    text-align: center;
+}
