@@ -226,9 +226,26 @@ body {
 
 .navbar ul li a:hover {
     background-color: #575757;
+} 
+
+/* Barra de notificación superior */
+.notification-bar {
+    background-color: #e74c3c; /* Fondo rojo */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centrado */
+    padding: 10px; /* Espaciado */
+    font-size: 1em; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    position: fixed; /* Barra fija en la parte superior */
+    top: 0; /* Pegada al borde superior */
+    width: 100%; /* Ancho completo de la pantalla */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
 }
 
-
+/* Ajuste de margen superior para el contenido debajo de la barra */
+body {
+    margin-top: 40px; /* Ajusta el margen superior para no tapar contenido */
+}
 
 
 
