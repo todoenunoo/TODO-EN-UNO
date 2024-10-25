@@ -9,13 +9,22 @@
 <body>
     <div class="notification-bar">15% OFF en efectivo</div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <ul>
+    <!-- Barra de navegación -->
+<nav class="navbar">
+    <div class="container">
+        <div class="logo">
+            <h1>TODO EN UNO</h1> <!-- Cambia esto por el logo si tienes uno -->
+        </div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
-    </nav>
+        <!-- Icono del menú hamburguesa -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+</nav>
 
     <!-- Sección de Contacto -->
     <div class="contact-container">
@@ -33,6 +42,26 @@
             </a>
         </div>
     </div>
+
+     <!-- Aquí comienza el footer -->
+     <footer style="background-color: #333; color: white; padding: 20px;">
+        <div style="text-align: center;">
+            <p>© 2024 TODO EN UNO. Todos los derechos reservados.</p>
+        </div>
+        <div style="display: flex; justify-content: center; padding: 10px;">
+            <div style="margin: 0 20px; text-align: center;">
+                
+                <p>Tomas</p>
+                <a href="https://wa.me/+5493364542572" style="color: #25d366;">Chat con Tomas</a>
+            </div>
+            <div style="margin: 0 20px; text-align: center;">
+
+                <p>Guadalupe</p>
+                <a href="https://wa.me/+5493462689486" style="color: #25d366;">Chat con Guadalupe</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Aquí termina el footer -->
 
 </body>
 </html>

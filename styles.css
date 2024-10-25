@@ -51,7 +51,7 @@ body {
 
 .product-details p {
     font-size: 16px;
-    color: #7f8c8d;
+    color: #000000;
     margin: 5px 0;
 }
 
@@ -249,3 +249,39 @@ body {
 
 
 
+/* Estilos para el footer */
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Posiciona el footer relativo */
+    bottom: 0; /* Asegura que esté al fondo */
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centra el texto */
+}
+
+footer .contact-container {
+    display: flex; /* Usa flexbox para alinear elementos */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 10px 0; /* Espaciado alrededor */
+}
+
+footer .contact {
+    margin: 0 20px; /* Espaciado entre contactos */
+    text-align: center; /* Centra el texto de cada contacto */
+}
+
+footer .contact img {
+    width: 50px; /* Ancho de la imagen */
+    height: 50px; /* Alto de la imagen */
+    border-radius: 50%; /* Hace que las imágenes sean circulares */
+}
+
+footer a {
+    color: #25d366; /* Color del enlace de WhatsApp */
+    text-decoration: none; /* Elimina subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subraya al pasar el mouse */
+}
