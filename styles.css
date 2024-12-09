@@ -4,12 +4,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    margin-top: 40px; /* Ajuste por la barra de notificación */
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly; /* Cambié 'center' por 'space-evenly' para mejor distribución */
     padding: 20px;
 }
 
@@ -24,19 +26,22 @@ body {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-card:hover {
     transform: scale(1.05);
 }
 
-/* Imagen de producto (misma proporción y tamaño para todas) */
+/* Imagen de producto */
 .product-image {
-    width: 100%;        /* Ajusta la imagen al 100% del ancho del contenedor */
-    height: 200px;      /* Altura fija para todas las imágenes */
-    object-fit: cover;  /* Hace que la imagen ocupe todo el contenedor manteniendo su proporción */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
-    cursor: pointer;    /* Cambia el cursor al pasar sobre la imagen */
+    cursor: pointer;
 }
 
 .product-details {
@@ -51,31 +56,31 @@ body {
 
 .product-details p {
     font-size: 16px;
-    color: #000000;
+    color: #000;
     margin: 5px 0;
 }
 
-/* Estilos para el icono flotante de WhatsApp */
+/* Icono flotante de WhatsApp */
 .whatsapp-button {
-    position: fixed;         /* Mantiene el icono en posición fija */
-    width: 60px;            /* Ancho del icono */
-    height: 60px;           /* Alto del icono */
-    bottom: 20px;           /* Distancia desde la parte inferior */
-    right: 20px;            /* Distancia desde la derecha */
-    background-color: #25d366; /* Color de fondo verde */
-    border-radius: 50%;     /* Hace que el fondo sea un círculo */
-    display: flex;          /* Para centrar el icono */
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;    /* Centrar verticalmente */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra */
-    z-index: 100;           /* Asegura que esté encima de otros elementos */
-    color: white;           /* Color del ícono */
-    font-size: 30px;        /* Tamaño del ícono */
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    color: white;
+    font-size: 30px;
 }
 
 /* Lightbox */
 .lightbox {
-    display: none; /* Oculto por defecto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -84,7 +89,7 @@ body {
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 200; /* Asegúrate de que esté por encima de otros elementos */
+    z-index: 200;
 }
 
 .lightbox img {
@@ -96,21 +101,22 @@ body {
 /* Responsividad */
 @media (max-width: 768px) {
     .product-card {
-        width: 45%;
+        width: 45%; /* Ajusta el tamaño de las tarjetas en pantallas medianas */
     }
 }
 
 @media (max-width: 480px) {
     .product-card {
-        width: 100%;
+        width: 100%; /* Ajusta las tarjetas a un 100% en pantallas pequeñas */
     }
 }
-/* Estilos de la barra de navegación */
+
+/* Barra de navegación */
 .navbar {
-    background-color: #333; /* Color de fondo de la barra */
-    color: white; /* Color del texto */
-    padding: 10px 20px; /* Espaciado */
-    position: relative; /* Para posicionar el menú móvil */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
 }
 
 .navbar .container {
@@ -120,178 +126,89 @@ body {
 }
 
 .navbar .logo h1 {
-    margin: 0; /* Elimina márgenes del logo */
+    margin: 0;
 }
 
 .nav-links {
-    list-style: none; /* Elimina el estilo de lista */
-    display: flex; /* Muestra los enlaces en línea */
-    margin: 0; /* Elimina margen */
-    padding: 0; /* Elimina relleno */
-}
-
-.nav-links li {
-    margin-left: 20px; /* Espacio entre enlaces */
-}
-
-.nav-links a {
-    color: white; /* Color de los enlaces */
-    text-decoration: none; /* Elimina subrayado */
-}
-
-.menu-toggle {
-    display: none; /* Oculto por defecto */
-    cursor: pointer; /* Cambia el cursor al pasar por encima */
-}
-
-/* Estilos responsive */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Oculta los enlaces en pantallas pequeñas */
-        flex-direction: column; /* Muestra los enlaces en columna */
-        position: absolute; /* Posiciona el menú en la pantalla */
-        background-color: #333; /* Color de fondo del menú */
-        width: 100%; /* Ancho completo */
-        top: 50px; /* Espaciado desde la parte superior */
-        left: 0; /* Alinea al lado izquierdo */
-        z-index: 1; /* Asegúrate de que esté encima */
-    }
-
-    .nav-links.active {
-        display: flex; /* Muestra los enlaces cuando está activo */
-    }
-
-    .menu-toggle {
-        display: block; /* Muestra el botón de menú en pantallas pequeñas */
-    }
-}
-/* Estilos para el contenedor de la página de contacto */
-.contact-container {
-    text-align: center;
-    padding: 50px;
-    background-color: #f5f5f5;
-}
-
-.contact-container h2 {
-    font-size: 2em;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.whatsapp-links {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.whatsapp-link {
-    background-color: #25d366;
-    color: white;
-    padding: 15px 20px;
-    border-radius: 5px;
-    margin: 10px 0;
-    text-decoration: none;
-    font-size: 18px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.whatsapp-link:hover {
-    background-color: #1ebe57;
-}
-
-/* Ajustes para íconos de WhatsApp */
-.whatsapp-link i {
-    margin-right: 10px;
-}
-
-/* Navbar estilos */
-.navbar ul {
     list-style: none;
-    background-color: #333;
-    overflow: hidden;
+    display: flex;
     margin: 0;
     padding: 0;
 }
 
-.navbar ul li {
-    display: inline;
-    padding: 10px 20px;
+.nav-links li {
+    margin-left: 20px;
 }
 
-.navbar ul li a {
+.nav-links a {
     color: white;
     text-decoration: none;
 }
 
-.navbar ul li a:hover {
-    background-color: #575757;
-} 
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
 
-/* Barra de notificación superior */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Barra de notificación */
 .notification-bar {
-    background-color: #e74c3c; /* Fondo rojo */
-    color: white; /* Texto en blanco */
-    text-align: center; /* Centrado */
-    padding: 10px; /* Espaciado */
-    font-size: 1em; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
-    position: fixed; /* Barra fija en la parte superior */
-    top: 0; /* Pegada al borde superior */
-    width: 100%; /* Ancho completo de la pantalla */
-    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Ajuste de margen superior para el contenido debajo de la barra */
-body {
-    margin-top: 40px; /* Ajusta el margen superior para no tapar contenido */
-}
-
-
-
-/* Estilos para el footer */
+/* Footer */
 footer {
-    background-color: #333; /* Color de fondo del footer */
-    color: white; /* Color del texto */
-    padding: 20px; /* Espaciado interno */
-    position: relative; /* Posiciona el footer relativo */
-    bottom: 0; /* Asegura que esté al fondo */
-    width: 100%; /* Ancho completo */
-    text-align: center; /* Centra el texto */
-}
-
-footer .contact-container {
-    display: flex; /* Usa flexbox para alinear elementos */
-    justify-content: center; /* Centra horizontalmente */
-    margin: 10px 0; /* Espaciado alrededor */
-}
-
-footer .contact {
-    margin: 0 20px; /* Espaciado entre contactos */
-    text-align: center; /* Centra el texto de cada contacto */
-}
-
-footer .contact img {
-    width: 50px; /* Ancho de la imagen */
-    height: 50px; /* Alto de la imagen */
-    border-radius: 50%; /* Hace que las imágenes sean circulares */
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 footer a {
-    color: #25d366; /* Color del enlace de WhatsApp */
-    text-decoration: none; /* Elimina subrayado */
+    color: #25d366;
+    text-decoration: none;
 }
 
 footer a:hover {
-    text-decoration: underline; /* Subraya al pasar el mouse */
+    text-decoration: underline;
 }
 
+/* Producto fuera de stock */
 .product-card.out-of-stock {
-    background-color: #d3d3d3; /* Cambia el fondo a gris */
+    background-color: #d3d3d3;
+    pointer-events: none;
+    opacity: 0.8;
+    overflow: hidden;
     position: relative;
-    pointer-events: none; /* Desactiva interacciones */
-    opacity: 0.8; /* Atenúa el producto */
-    overflow: hidden; /* Evita que el contenido se desborde */
 }
 
 .product-card.out-of-stock::before {
@@ -299,15 +216,12 @@ footer a:hover {
     color: white;
     font-size: 18px;
     font-weight: bold;
-    background-color: rgba(220, 20, 60, 0.9); /* Fondo rojo oscuro */
+    background-color: rgba(220, 20, 60, 0.9);
     padding: 5px 20px;
     position: absolute;
-    top: 50%; /* Ajusta la posición vertical */
-    left: -25%; /* Ajusta la posición horizontal */
-    transform: rotate(-45deg); /* Franja en diagonal */
-    width: 150%; /* Limita el ancho de la franja */
+    top: 50%;
+    left: -25%;
+    transform: rotate(-45deg);
+    width: 150%;
     text-align: center;
 }
-
-
-
