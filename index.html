@@ -17,6 +17,12 @@
         <div class="logo">
             <h1>TODO EN UNO</h1> <!-- Cambia esto por el logo si tienes uno -->
         </div>
+        <form class="search-form" onsubmit="filterProducts(event)">
+            <input type="text" id="search-bar" placeholder="Buscar productos..." aria-label="Buscar productos">
+            <button type="submit" class="search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="contacto.html">Contacto</a></li>
@@ -345,8 +351,8 @@
     </div>
 </div>
 
- <!-- Producto 24: Linterna -->
- <div class="product-card">
+<!-- Producto 24: Linterna -->
+<div class="product-card">
     <img src="imagenes/linterna.jpeg" alt="Producto 24" class="product-image" onclick="openImage(this.src)">
     <div class="product-details">
         <h3>Linterna super potencia</h3>
